@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+:root {
+	--Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+	--Light-Grayish-Cyan: hsl(180, 52%, 96%);
+	--Light-Grayish-Cyan: hsl(180, 31%, 95%);
+	--Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+	--Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 15px;
+	font-family: "League Spartan", sans-serif;
+	background-color: var(--Light-Grayish-Cyan);
+}
+
+header {
+	width: 100vw;
+	height: 16vh;
+	background-color: var(--Desaturated-Dark-Cyan);
+	position: absolute;
+	z-index: 1;
+	top: 0;
+}
+header > img {
+	width: 100%;
+	height: 100%;
+}
+h5,
+i {
+	cursor: pointer;
+}
+.container {
+	width: 50%;
+	margin: auto;
+	display: grid;
+	margin-top: 100px;
+	gap: 30px;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(1fr, auto);
+}
+.container .input {
+	padding: 10px !important;
+	display: none;
+}
+.input > .fillter > .searchbar > div > h5 {
+	color: var(--Desaturated-Dark-Cyan);
+	font-size: 1em;
+	background-color: var(--Light-Grayish-Cyan);
+	padding: 8px;
+	border-radius: 4px;
+}
+.input > .fillter > .searchbar {
+	display: flex;
+	padding-left: 20px;
+}
+.input > .fillter > div > div {
+	display: flex;
+	align-items: center;
+}
+.input > .fillter > .searchbar > div > i {
+	background-color: var(--Desaturated-Dark-Cyan);
+	color: white;
+	padding: 7px;
+	border-radius: 4px;
+}
+i:hover {
+	cursor: pointer;
+	background-color: var(--Very-Dark-Grayish-Cyan);
+}
+.fillter > div > h5:hover {
+	cursor: pointer;
+}
+
+.clear,
+.search {
+	color: var(--Desaturated-Dark-Cyan);
+	padding-right: 20px;
+}
+.mini-buttons > .clear:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.grid:hover {
+	border-radius: 7px;
+	border-left: 5px solid var(--Desaturated-Dark-Cyan);
+}
+.flex {
+	display: flex;
+	background-color: white;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px;
+	border: 5px solid transparent;
+	border-radius: 7px;
+	z-index: 3;
+}
+.information-about-job {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.information-about-job h1 {
+	font-size: 20px;
+	color: var(--Desaturated-Dark-Cyan);
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.information-about-job h1:hover {
+	cursor: pointer;
+}
+.information-about-job h3 {
+	color: var(--Desaturated-Dark-Cyan);
+}
+.information-about-job > div {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+ul {
+	display: flex;
+	gap: 35px;
+}
+li:nth-child(1) {
+	list-style: none;
+}
+ul > li {
+	color: var(--Dark-Grayish-Cyan);
+	white-space: nowrap;
+}
+.padding {
+	color: white;
+	padding: 5px;
+	border-radius: 12px;
+	text-transform: uppercase;
+}
+.color-dark-cyan {
+	background-color: var(--Desaturated-Dark-Cyan);
+}
+.color-grayish-cyan {
+	background-color: var(--Very-Dark-Grayish-Cyan);
+}
+
+.left-flex {
+	display: flex;
+	gap: 25px;
+}
+.left-flex > img {
+	width: 38%;
+	object-fit: contain;
+}
+
+.role {
+	display: flex;
+	gap: 20px;
+}
+i {
+	margin-right: 20px;
+}
+i:hover {
+	background-color: var(--Very-Dark-Grayish-Cyan) !important;
+}
+.right-flex > .role > h5:hover {
+	cursor: pointer;
+	color: white;
+	background-color: var(--Desaturated-Dark-Cyan);
+}
+.role > h5 {
+	color: var(--Desaturated-Dark-Cyan);
+	font-size: 1em;
+	background-color: var(--Light-Grayish-Cyan);
+	padding: 8px;
+	border-radius: 4px;
+}
+
+.mobile {
+	display: none;
+}
+.mini-buttons {
+	display: flex;
+}
+input {
+	border: none;
+	height: 30px;
+	background: var(--Light-Grayish-Cyan);
+	margin-right: 10px;
+	padding: 10px;
+}
+
+@media (max-width: 1650px) {
+	.container {
+		width: 60%;
+	}
+}
+@media (max-width: 1440px) {
+	.container {
+		width: 70%;
+		margin: auto;
+		display: grid;
+		margin-top: 100px;
+		gap: 30px;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(1fr, auto);
+	}
+}
+
+@media (max-width: 1200px) {
+	.grid {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 70%;
+		margin: auto;
+	}
+}
+@media (max-width: 800px) {
+	.container {
+		gap: 60px;
+	}
+	.mobile {
+		display: block;
+	}
+
+	.desktop {
+		display: none;
+	}
+	.input {
+		display: none;
+	}
+	header {
+		position: static;
+	}
+	.grid {
+		position: relative;
+		width: 100%;
+	}
+	.role {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 600px) {
+	.left-flex {
+		flex-wrap: wrap;
+	}
+	.left-flex > img {
+		width: 15%;
+		position: absolute;
+		top: -10%;
+		left: 5%;
+	}
+	.information-about-job h1 {
+		color: var(--Very-Dark-Grayish-Cyan);
+	}
+	.hr {
+		width: 100%;
+	}
+	.grid {
+		align-items: flex-start;
+	}
+}
